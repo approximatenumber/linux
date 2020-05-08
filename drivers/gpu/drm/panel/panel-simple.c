@@ -2372,6 +2372,31 @@ static const struct panel_desc nec_nl4827hc19_05b = {
 	.bus_flags = DRM_BUS_FLAG_PIXDATA_DRIVE_POSEDGE,
 };
 
+static const struct display_timing nec_nl10276bc13_01c_timing = {
+	.pixelclock = { 62600000, 68200000, 78100000 },
+	.hactive = { 1024, 1024, 1024 },
+	.hfront_porch = { 15, 64, 159 },
+	.hback_porch = { 5, 5, 5 },
+	.hsync_len = { 1, 1, 256 },
+	.vactive = { 768, 768, 768 },
+	.vfront_porch = { 3, 40, 99 },
+	.vback_porch = { 2, 2, 2 },
+	.vsync_len = { 1, 1, 128 },
+	.flags = DISPLAY_FLAGS_DE_HIGH,
+};
+
+static const struct panel_desc nec_nl10276bc13_01c = {
+	.timings = &nec_nl10276bc13_01c_timing,
+	.num_timings = 1,
+	.bpc = 8,
+	.size = {
+		.width = 132,
+		.height = 99,
+	},
+	.bus_format = MEDIA_BUS_FMT_RGB888_1X7X4_JEIDA,
+	.connector_type = DRM_MODE_CONNECTOR_LVDS,
+};
+
 static const struct drm_display_mode netron_dy_e231732_mode = {
 	.clock = 66000,
 	.hdisplay = 1024,
@@ -3634,6 +3659,9 @@ static const struct of_device_id platform_of_match[] = {
 	}, {
 		.compatible = "nec,nl4827hc19-05b",
 		.data = &nec_nl4827hc19_05b,
+	}, {
+		.compatible = "nec,nl10276bc13_01c",
+		.data = &nec_nl10276bc13_01c,
 	}, {
 		.compatible = "netron-dy,e231732",
 		.data = &netron_dy_e231732,
