@@ -171,6 +171,8 @@ properties:
       - logictechno,lt170410-2whc
         # Mitsubishi "AA070MC01 7.0" WVGA TFT LCD panel
       - mitsubishi,aa070mc01-ca1
+        # NEC LCD Technologies, Ltd. 6.5" XGA TFT 1024x768 LCD panel
+      - nec,nl10276bc13-01c
         # NEC LCD Technologies, Ltd. 12.1" WXGA (1280x800) LVDS TFT LCD panel
       - nec,nl12880bc20-05
         # NEC LCD Technologies,Ltd. WQVGA TFT LCD panel
